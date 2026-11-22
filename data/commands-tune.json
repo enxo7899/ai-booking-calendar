@@ -1,0 +1,501 @@
+{
+  "note": "Development set: the parser was written and adjusted while looking at these. The last 30 were the first held-out set (v1); after it was scored once (73% intent, 63% all fields) it was merged here and a fresh held-out set was written. today = 2026-11-24 (Tuesday), now = 09:40.",
+  "today": "2026-11-24",
+  "commands": [
+    {
+      "text": "Book Dritan for dry needling with Arben tomorrow after 5pm",
+      "intent": "book",
+      "client": "c03",
+      "staff": "arben",
+      "service": "needling",
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Ana needs a follow-up tomorrow morning",
+      "intent": "book",
+      "client": null,
+      "staff": null,
+      "service": "followup",
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Arben called in sick today",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "arben",
+      "service": null,
+      "date": "2026-11-24",
+      "time": null
+    },
+    {
+      "text": "Elira is leaving early on Friday at 1pm",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "elira",
+      "service": null,
+      "date": "2026-11-27",
+      "time": "13:00"
+    },
+    {
+      "text": "Move Luca's Thursday massage to Friday evening",
+      "intent": "move",
+      "client": "c04",
+      "staff": null,
+      "service": "massage",
+      "date": "2026-11-27",
+      "time": null
+    },
+    {
+      "text": "push Tom back an hour",
+      "intent": "move",
+      "client": "c10",
+      "staff": null,
+      "service": null,
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "Cancel Giulia's reformer session",
+      "intent": "cancel",
+      "client": "c07",
+      "staff": null,
+      "service": "reformer",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "When can Marco do a sports massage this week after 6?",
+      "intent": "find",
+      "client": null,
+      "staff": "marco",
+      "service": "massage",
+      "date": "2026-11-24",
+      "time": null
+    },
+    {
+      "text": "Put Hannah on the waitlist for reformer pilates",
+      "intent": "waitlist",
+      "client": "c19",
+      "staff": null,
+      "service": "reformer",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "What does Jona have tomorrow?",
+      "intent": "query",
+      "client": null,
+      "staff": "jona",
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Fill the gaps on Wednesday",
+      "intent": "fill_gaps",
+      "client": null,
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Rezervo Besa per pilates neser ne 10",
+      "intent": "book",
+      "client": "c05",
+      "staff": null,
+      "service": "reformer",
+      "date": "2026-11-25",
+      "time": "10:00"
+    },
+    {
+      "text": "book mrs Berisha 28 nov at 9:30",
+      "intent": "book",
+      "client": "c01",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-28",
+      "time": "09:30"
+    },
+    {
+      "text": "Can you fit Klajdi in on the 27th around 3?",
+      "intent": "book",
+      "client": "c06",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-27",
+      "time": "15:00"
+    },
+    {
+      "text": "Move Luca to Friday evening",
+      "intent": "move",
+      "client": "c04",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-27",
+      "time": null
+    },
+    {
+      "text": "Cancel Giulia's next reformer session",
+      "intent": "cancel",
+      "client": "c07",
+      "staff": null,
+      "service": "reformer",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "Fill the gaps tomorrow from the waitlist",
+      "intent": "fill_gaps",
+      "client": null,
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Book Ana Berisha with Marco for physio tomorrow at 10",
+      "intent": "book",
+      "client": "c01",
+      "staff": "marco",
+      "service": "followup",
+      "date": "2026-11-25",
+      "time": "10:00"
+    },
+    {
+      "text": "Sara is off sick tomorrow",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "sara",
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "book Tom Walsh next Tuesday at 6pm",
+      "intent": "book",
+      "client": "c10",
+      "staff": null,
+      "service": null,
+      "date": "2026-12-01",
+      "time": "18:00"
+    },
+    {
+      "text": "Any space for shockwave on Thursday afternoon?",
+      "intent": "find",
+      "client": null,
+      "staff": null,
+      "service": "shockwave",
+      "date": "2026-11-26",
+      "time": null
+    },
+    {
+      "text": "Reschedule Mirela to Friday at 11",
+      "intent": "move",
+      "client": "c09",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-27",
+      "time": "11:00"
+    },
+    {
+      "text": "Matteo can't make it tomorrow",
+      "intent": "cancel",
+      "client": "c16",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Who's working on Saturday?",
+      "intent": "query",
+      "client": null,
+      "staff": null,
+      "service": null,
+      "date": "2026-11-28",
+      "time": null
+    },
+    {
+      "text": "Prenota Francesca per pilates domani alle 9",
+      "intent": "book",
+      "client": "c13",
+      "staff": null,
+      "service": "reformer",
+      "date": "2026-11-25",
+      "time": "09:00"
+    },
+    {
+      "text": "Could you book Sokol in with Elira on Thursday at half past ten?",
+      "intent": "book",
+      "client": "c12",
+      "staff": "elira",
+      "service": null,
+      "date": "2026-11-26",
+      "time": "10:30"
+    },
+    {
+      "text": "Need a sports massage for Paolo Ricci next Monday evening",
+      "intent": "book",
+      "client": "c22",
+      "staff": null,
+      "service": "massage",
+      "date": "2026-11-30",
+      "time": null
+    },
+    {
+      "text": "Jona has a family emergency, she's out this afternoon",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "jona",
+      "service": null,
+      "date": "2026-11-24",
+      "time": null
+    },
+    {
+      "text": "Marco is on holiday Friday",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "marco",
+      "service": null,
+      "date": "2026-11-27",
+      "time": null
+    },
+    {
+      "text": "move Genti's appointment to tomorrow at 6pm",
+      "intent": "move",
+      "client": "c18",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": "18:00"
+    },
+    {
+      "text": "Can we push Kevin 30 minutes later?",
+      "intent": "move",
+      "client": "c23",
+      "staff": null,
+      "service": null,
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "Chiara cancelled her massage",
+      "intent": "cancel",
+      "client": "c32",
+      "staff": null,
+      "service": "massage",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "is there any reformer slot on Saturday morning?",
+      "intent": "find",
+      "client": null,
+      "staff": null,
+      "service": "reformer",
+      "date": "2026-11-28",
+      "time": null
+    },
+    {
+      "text": "Add Redon to the waiting list for needling with Arben",
+      "intent": "waitlist",
+      "client": "c33",
+      "staff": "arben",
+      "service": "needling",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "show me Elira's day on Friday",
+      "intent": "query",
+      "client": null,
+      "staff": "elira",
+      "service": null,
+      "date": "2026-11-27",
+      "time": null
+    },
+    {
+      "text": "first appointment for Ben Turner with Arben, Wednesday after 4",
+      "intent": "book",
+      "client": "c48",
+      "staff": "arben",
+      "service": "assess",
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Rezervo Mirela per pelvic health te enjten",
+      "intent": "book",
+      "client": "c09",
+      "staff": null,
+      "service": "pelvic",
+      "date": "2026-11-26",
+      "time": null
+    },
+    {
+      "text": "Giulia vorrebbe spostare il pilates a venerdi",
+      "intent": "move",
+      "client": "c07",
+      "staff": null,
+      "service": "reformer",
+      "date": "2026-11-27",
+      "time": null
+    },
+    {
+      "text": "Lymphatic drainage for Albana on 1 Dec at 2pm",
+      "intent": "book",
+      "client": "c11",
+      "staff": null,
+      "service": "lymph",
+      "date": "2026-12-01",
+      "time": "14:00"
+    },
+    {
+      "text": "Ornela won't make it on Saturday, please cancel",
+      "intent": "cancel",
+      "client": "c24",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-28",
+      "time": null
+    },
+    {
+      "text": "Arben's not feeling well, he won't be in tomorrow",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "arben",
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "When's the earliest Jona could see a new pelvic health patient?",
+      "intent": "find",
+      "client": null,
+      "staff": "jona",
+      "service": "pelvic",
+      "date": null,
+      "time": null
+    },
+    {
+      "text": "Use the waitlist to fill Thursday",
+      "intent": "fill_gaps",
+      "client": null,
+      "staff": null,
+      "service": null,
+      "date": "2026-11-26",
+      "time": null
+    },
+    {
+      "text": "bring Daniela forward to 11am",
+      "intent": "move",
+      "client": "c28",
+      "staff": null,
+      "service": null,
+      "date": null,
+      "time": "11:00"
+    },
+    {
+      "text": "Book Oliver Hughes massage with Marco 12/12 at 17:30",
+      "intent": "book",
+      "client": "c36",
+      "staff": "marco",
+      "service": "massage",
+      "date": "2026-12-12",
+      "time": "17:30"
+    },
+    {
+      "text": "Emma wants another reformer class next week",
+      "intent": "book",
+      "client": "c40",
+      "staff": null,
+      "service": "reformer",
+      "date": "2026-11-30",
+      "time": null
+    },
+    {
+      "text": "what's on tomorrow",
+      "intent": "query",
+      "client": null,
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Shockwave for Andi with Elira, Thursday first thing",
+      "intent": "book",
+      "client": "c42",
+      "staff": "elira",
+      "service": "shockwave",
+      "date": "2026-11-26",
+      "time": null
+    },
+    {
+      "text": "Sara can't come in on Monday, she has training",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "sara",
+      "service": null,
+      "date": "2026-11-30",
+      "time": null
+    },
+    {
+      "text": "please reschedule Luca Ferri to next Wednesday at 7pm",
+      "intent": "move",
+      "client": "c04",
+      "staff": null,
+      "service": null,
+      "date": "2026-12-02",
+      "time": "19:00"
+    },
+    {
+      "text": "Can Pietro get dry needling sometime this week?",
+      "intent": "book",
+      "client": "c46",
+      "staff": null,
+      "service": "needling",
+      "date": "2026-11-24",
+      "time": null
+    },
+    {
+      "text": "Teuta is no longer coming tomorrow",
+      "intent": "cancel",
+      "client": "c41",
+      "staff": null,
+      "service": null,
+      "date": "2026-11-25",
+      "time": null
+    },
+    {
+      "text": "Any free time with Marco today?",
+      "intent": "find",
+      "client": null,
+      "staff": "marco",
+      "service": null,
+      "date": "2026-11-24",
+      "time": null
+    },
+    {
+      "text": "Klajdi Muça follow up Friday 4:15pm",
+      "intent": "book",
+      "client": "c06",
+      "staff": null,
+      "service": "followup",
+      "date": "2026-11-27",
+      "time": "16:15"
+    },
+    {
+      "text": "Elira has to leave at 2 today",
+      "intent": "staff_off",
+      "client": null,
+      "staff": "elira",
+      "service": null,
+      "date": "2026-11-24",
+      "time": "14:00"
+    }
+  ]
+}

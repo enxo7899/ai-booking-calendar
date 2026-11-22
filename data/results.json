@@ -1,0 +1,94 @@
+{
+  "generated": "2026-11-22",
+  "parser": {
+    "sets": [
+      {
+        "name": "Tuning set (seen while building)",
+        "n": 55,
+        "intent": 1,
+        "exact": 1
+      },
+      {
+        "name": "Held-out set (never tuned on)",
+        "n": 30,
+        "intent": 0.9,
+        "exact": 0.8333333333333334
+      }
+    ],
+    "heldoutMisses": [
+      "Is Sara free on Friday morning for a private pilates?",
+      "Rezervo Klajdin me Arbenin per fizioterapi te premten ne 5",
+      "Arben is at a course on Monday",
+      "Fill any gaps on Friday with people from the waiting list",
+      "Elira is out from 1pm on Thursday"
+    ],
+    "history": "An earlier held-out set (v1, 30 commands) scored 73% intent and 63% all-fields. It was then merged into the tuning set, the parser was improved, and the fresh v2 set above was written and scored once."
+  },
+  "repair": {
+    "scenarios": 168,
+    "clients": 900,
+    "rows": [
+      {
+        "label": "Clients rehoused (not cancelled)",
+        "ours": "90.0%",
+        "naive": "89.7%"
+      },
+      {
+        "label": "Kept their usual therapist",
+        "ours": "63.0%",
+        "naive": "54.8%"
+      },
+      {
+        "label": "Kept the same day",
+        "ours": "16.5%",
+        "naive": "14.0%"
+      },
+      {
+        "label": "Moved by 2 days or less",
+        "ours": "51.0%",
+        "naive": "53.2%"
+      },
+      {
+        "label": "Average disruption score per client (lower is better)",
+        "ours": "9.17",
+        "naive": "10.23"
+      },
+      {
+        "label": "Plans that broke a rule when applied",
+        "ours": "0",
+        "naive": "n/a"
+      }
+    ],
+    "note": "The planner trades a little speed for continuity: it keeps far more clients with their usual therapist, and moves slightly fewer within two days. Flexible clients were asked to shift 7 times across all scenarios.",
+    "raw": {
+      "ours": {
+        "affected": 900,
+        "rehoused": 810,
+        "unresolved": 90,
+        "sameTime": 14,
+        "sameDay": 134,
+        "usualTherapist": 510,
+        "hoursMoved": 56404.40000000007,
+        "flexibleShifts": 7,
+        "within2Days": 413,
+        "cost": 8256.16000000002
+      },
+      "naive": {
+        "affected": 900,
+        "rehoused": 807,
+        "unresolved": 93,
+        "sameTime": 1,
+        "sameDay": 113,
+        "usualTherapist": 442,
+        "hoursMoved": 54430.70000000006,
+        "flexibleShifts": 0,
+        "within2Days": 429,
+        "cost": 9204.400000000014
+      }
+    }
+  },
+  "guardrails": {
+    "attempts": 2990,
+    "saved": 0
+  }
+}

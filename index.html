@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orari · AI booking calendar</title>
+<meta name="description" content="An AI booking desk for appointment businesses: book, move and cancel in plain words, reschedule a sick day in one click, and never double-book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f5c4a'/%3E%3Cpath d='M9 11h14M9 16h9M9 21h11' stroke='%23f5f2ea' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="banner">
+  <span>Live demo by <a href="https://github.com/enxo7899">EmSoft</a>: Lëvizja Physio &amp; Movement is a fictional studio in Tirana. The assistant runs offline in your browser.</span>
+  <a href="https://github.com/enxo7899/ai-booking-calendar">Source on GitHub</a>
+</div>
+
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 11h14M9 16h9M9 21h11"/></svg>
+    <div>
+      <b>Orari</b>
+      <small>Lëvizja Physio &amp; Movement</small>
+    </div>
+  </div>
+  <nav class="datenav" aria-label="Date">
+    <button class="icon" data-nav="-1" aria-label="Previous">‹</button>
+    <button class="ghost" data-nav="today">Today</button>
+    <button class="icon" data-nav="1" aria-label="Next">›</button>
+    <h1 id="dateLabel"></h1>
+  </nav>
+  <div class="views" role="tablist" aria-label="View">
+    <button role="tab" data-view="day">Day</button>
+    <button role="tab" data-view="week">Week</button>
+    <button role="tab" data-view="agenda">Agenda</button>
+  </div>
+  <div class="actions">
+    <button class="ghost" id="undoBtn" disabled title="Undo (Ctrl+Z)">Undo</button>
+    <div class="menu">
+      <button class="ghost" id="scenarioBtn" aria-haspopup="true">Try a scenario</button>
+      <div class="menu-pop" id="scenarioMenu" hidden></div>
+    </div>
+    <button class="ghost" id="evidenceBtn">How well it works</button>
+  </div>
+</header>
+
+<main class="shell">
+  <aside class="rail" id="rail"></aside>
+  <section class="board" id="board" aria-live="polite"></section>
+  <aside class="side" id="side">
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="assistant" class="on">Assistant</button>
+      <button role="tab" data-tab="outbox">Outbox <span class="count" id="outboxCount"></span></button>
+      <button role="tab" data-tab="log">Activity</button>
+    </div>
+    <div class="pane" id="pane-assistant">
+      <div class="thread" id="thread"></div>
+      <form class="composer" id="composer">
+        <textarea id="input" rows="2" placeholder="Book Dritan with Arben tomorrow after 5pm…" aria-label="Tell the assistant what to do"></textarea>
+        <div class="composer-row">
+          <span class="hint" title="The sentence-understanding step runs as an offline stand-in here. llm/claude-intent.js swaps in Claude with the same JSON.">Offline stand-in for the AI step · <kbd>Enter</kbd> to send</span>
+          <button class="primary" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+    <div class="pane" id="pane-outbox" hidden></div>
+    <div class="pane" id="pane-log" hidden></div>
+  </aside>
+</main>
+
+<nav class="mobile-nav" aria-label="Sections">
+  <button data-mobile="board" class="on">Calendar</button>
+  <button data-mobile="side">Assistant</button>
+  <button data-mobile="rail">Today</button>
+</nav>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="modal" id="modal" hidden><div class="modal-card" id="modalCard"></div></div>
+<div class="pop" id="pop" hidden></div>
+
+<script type="module" src="app/app.js"></script>
+</body>
+</html>
